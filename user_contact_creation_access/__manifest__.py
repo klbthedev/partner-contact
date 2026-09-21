@@ -1,0 +1,14 @@
+{
+    "name": "User-Level Contact Creation Access",
+    "version": "18.0.1.0.0",
+    "development_status": "Beta",
+    "summary": "Control contact creation permission per user",
+    "category": "Contacts",
+    "author": "Odoo Community Association (OCA), kalab.rened@outlook.com",
+    "license": "AGPL-3",
+    "depends": ["base", "contacts"],
+    "data": ["security/security.xml"],
+    "installable": True,
+    "application": False,
+    "website": "https://github.com/OCA/partner-contact",
+}
