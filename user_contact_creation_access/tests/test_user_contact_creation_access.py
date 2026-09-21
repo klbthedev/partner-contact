@@ -21,9 +21,18 @@ class TestUserContactCreationAccess(TransactionCase):
         with self.assertRaises(AccessError):
             self.env["res.partner"].with_user(self.user).create({"name": "New Partner"})
 
-        self.user.write({
-            "groups_id": [(4, self.env.ref("user_contact_creation_access.group_contact_creation").id)]
-        })
+        self.user.write(
+            {
+                "groups_id": [
+                    (
+                        4,
+                        self.env.ref(
+                            "user_contact_creation_access.group_contact_creation"
+                        ).id,
+                    )
+                ]
+            }
+        )
         partner = (
             self.env["res.partner"].with_user(self.user).create({"name": "New Partner"})
         )
