@@ -373,9 +373,17 @@ ul.auto-toc {
 <p>This module assigns unique sequence IDs to Partners (Customers and
 Vendors) and Employees. It automatically generates identifiers based on
 customizable sequences (res.partner.customer, res.partner.vendor,
-hr.employee.custom) when a partner or employee is created or modified.
-It also enforces uniqueness of Tax Identification Numbers (TIN) across
-all partners.</p>
+hr.employee.custom) when a partner or employee is created or modified.</p>
+<p><strong>Use Cases / Benefits:</strong></p>
+<ul class="simple">
+<li>Standardize identifiers for integrations with third-party systems
+(ERPs, Payroll).</li>
+<li>Provide a clear, human-readable reference number for auditing or
+accounting.</li>
+<li>Eliminate dependency on <tt class="docutils literal">id</tt> which can differ across databases.</li>
+</ul>
+<p>It also enforces uniqueness of Tax Identification Numbers (TIN) across
+all partners to prevent duplicate records.</p>
 <p><strong>Table of contents</strong></p>
 <div class="contents local topic" id="contents">
 <ul class="simple">
